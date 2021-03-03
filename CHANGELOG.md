@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/jacob-ebey/forgo-lazy/compare/v1.1.0...v1.1.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* updated internal to re-render parent ([b979885](https://www.github.com/jacob-ebey/forgo-lazy/commit/b97988591da2c9d53fb320e3f38cdc665c83dace))
+
 ## [1.1.0](https://www.github.com/jacob-ebey/forgo-lazy/compare/v1.0.1...v1.1.0) (2021-03-03)
 
 
