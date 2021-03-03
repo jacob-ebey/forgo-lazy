@@ -22,7 +22,7 @@ const common = {
   entryPoints,
   platform: "node",
   bundle: false,
-  minify: false,
+  minify: true,
   banner,
   jsxFactory: "h",
   jsxFragment: "Fragment",
