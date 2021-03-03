@@ -1,0 +1,37 @@
+name: PR CI
+
+on: pull_request
+
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install NPM Dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Build
+        run: yarn build
+
+      - name: get-npm-version
+        id: version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - uses: JS-DevTools/npm-publish@v1
+        if: ${{ contains(steps.version.outputs.current-version, format('-pr.{0}-', github.event.number)) }}
+        with:
+          registry: https://npm.pkg.github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
+          check-version: true
+          tag: pr
