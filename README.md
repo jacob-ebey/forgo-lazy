@@ -1,5 +1,7 @@
 # forgo-lazy
 
+[![bundlephobia](https://badgen.net/bundlephobia/min/forgo-lazy)](https://bundlephobia.com/result?p=forgo-lazy)
+[![bundlephobia](https://badgen.net/bundlephobia/minzip/forgo-lazy)](https://bundlephobia.com/result?p=forgo-lazy)
 [![codecov](https://codecov.io/gh/jacob-ebey/forgo-lazy/branch/main/graph/badge.svg?token=4O0X0JM2LH)](https://codecov.io/gh/jacob-ebey/forgo-lazy)
 
 Lazy forgojs components ready for SSR and chunk preloading
