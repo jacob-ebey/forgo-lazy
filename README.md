@@ -1,8 +1,26 @@
-# Library Boilerplate
+# forgo-lazy
 
-Simple NPM library boilerplate with Typescript, Jest and Github Worflows.
+[![codecov](https://codecov.io/gh/jacob-ebey/forgo-lazy/branch/main/graph/badge.svg?token=4O0X0JM2LH)](https://codecov.io/gh/jacob-ebey/forgo-lazy)
 
-## Commands
+Lazy forgojs components ready for SSR and chunk preloading
+
+## Usage
+
+```tsx
+import lazy, { Suspense } from "forgo-lazy";
+
+const LazyComponent = lazy(() => import("./lazy-component"));
+
+const App = () => ({
+  render: () => (
+    <Suspense fallback={() => "Loading..."}>
+      <LazyComponent title="It's that easy :D" />
+    </Suspense>
+  ),
+});
+```
+
+## Development Commands
 
 - **yarn build**: Build the library and generate TS types.
 - **yarn dev**: Start Jest in watch mode.
