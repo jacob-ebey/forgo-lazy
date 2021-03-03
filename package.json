@@ -64,9 +64,6 @@
     }
   },
   "dependencies": {
-    "@jacob-ebey/astring": "^1.4.4",
-    "acorn": "^8.0.5",
-    "acorn-walk": "^8.0.2",
     "forgo": "0.0.73"
   }
 }
