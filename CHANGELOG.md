@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/jacob-ebey/forgo-lazy/compare/v1.0.1...v1.1.0) (2021-03-03)
+
+
+### Features
+
+* minified output files ([36a3195](https://www.github.com/jacob-ebey/forgo-lazy/commit/36a3195dbb4ad372617aab630af9b2e6afe42c5b))
+
 ### [1.0.1](https://www.github.com/jacob-ebey/forgo-lazy/compare/v1.0.0...v1.0.1) (2021-03-03)
 
 
