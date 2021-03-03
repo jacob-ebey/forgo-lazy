@@ -32,6 +32,6 @@ jobs:
         if: ${{ contains(steps.version.outputs.current-version, format('-pr.{0}-', github.event.number)) }}
         with:
           registry: https://npm.pkg.github.com
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.NPM_TOKEN }}
           check-version: true
           tag: pr

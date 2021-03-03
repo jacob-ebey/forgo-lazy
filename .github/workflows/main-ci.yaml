@@ -41,7 +41,7 @@ jobs:
         if: ${{ contains(steps.version.outputs.current-version, '-beta.') }}
         with:
           registry: https://npm.pkg.github.com
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.NPM_TOKEN }}
           check-version: true
           tag: beta
 
@@ -49,5 +49,5 @@ jobs:
         if: ${{ steps.release.outputs.release_created && !contains(steps.version.outputs.current-version, '-') }}
         with:
           registry: https://npm.pkg.github.com
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.NPM_TOKEN }}
           check-version: true
