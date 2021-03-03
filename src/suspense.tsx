@@ -16,14 +16,6 @@ const SuspenseFallback: ForgoComponentCtor<SuspenseProps> = () => {
 
 const SuspenseInternal: ForgoComponentCtor<SuspenseProps> = () => {
   return {
-    render({ children }) {
-      return children;
-    },
-  };
-};
-
-export const Suspense: ForgoComponentCtor<SuspenseProps> = () => {
-  return {
     error({ fallback }, args) {
       if (typeof window === "undefined") {
         throw args.error;
@@ -32,12 +24,23 @@ export const Suspense: ForgoComponentCtor<SuspenseProps> = () => {
       if (args.error.then) {
         const promise: Promise<void> = args.error;
         promise.then(() => {
-          rerender(args.element);
+          rerender({
+            ...args.element,
+            componentIndex: args.element.componentIndex - 1,
+          });
         });
       }
 
       return <SuspenseFallback fallback={fallback} />;
     },
+    render({ children }) {
+      return children;
+    },
+  };
+};
+
+export const Suspense: ForgoComponentCtor<SuspenseProps> = () => {
+  return {
     render({ children, ...props }) {
       return <SuspenseInternal {...props}>{children}</SuspenseInternal>;
     },
