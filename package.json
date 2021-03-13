@@ -13,10 +13,10 @@
     "lib"
   ],
   "types": "./lib/types/index.d.ts",
-  "main": "./lib/cjs/index.cjs",
+  "main": "./lib/cjs/index.js",
   "exports": {
-    "import": "./lib/esm/index.js",
-    "require": "./lib/cjs/index.cjs"
+    "import": "./lib/esm/index.mjs",
+    "require": "./lib/cjs/index.js"
   },
   "scripts": {
     "build": "run-p build:*",
