@@ -32,7 +32,6 @@ const configs = [
   {
     outdir: `lib/esm`,
     format: "esm",
-    outExtension: { ".js": ".mjs" },
   },
   {
     outdir: `lib/cjs`,
