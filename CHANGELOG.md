@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.4](https://www.github.com/jacob-ebey/forgo-lazy/compare/v1.1.3...v1.1.4) (2021-03-13)
+
+
+### Bug Fixes
+
+* removed `type: "module"` from package.json ([2f90444](https://www.github.com/jacob-ebey/forgo-lazy/commit/2f90444a6979408b9694cf9276943d89287fbf87))
+
 ### [1.1.3](https://www.github.com/jacob-ebey/forgo-lazy/compare/v1.1.2...v1.1.3) (2021-03-13)
 
 
